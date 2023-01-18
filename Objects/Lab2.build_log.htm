@@ -1,0 +1,456 @@
+<html>
+<body>
+<pre>
+<h1>µVision Build Log</h1>
+<h2>Tool Versions:</h2>
+IDE-Version: µVision V5.37.0.0
+Copyright (C) 2022 ARM Ltd and ARM Germany GmbH. All rights reserved.
+License Information: Vika James, KPI, LIC=----
+ 
+Tool Versions:
+Toolchain:       MDK-Lite  Version: 5.37.0.0
+Toolchain Path:  C:\Keil_v5\ARM\ARMCLANG\Bin
+C Compiler:      ArmClang.exe V6.18
+Assembler:       Armasm.exe V6.18
+Linker/Locator:  ArmLink.exe V6.18
+Library Manager: ArmAr.exe V6.18
+Hex Converter:   FromElf.exe V6.18
+CPU DLL:         SARMCM3.DLL V5.37.0.0
+Dialog DLL:      DCM.DLL V1.17.5.0
+Target DLL:      STLink\ST-LINKIII-KEIL_SWO.dll V3.0.9.0
+Dialog DLL:      TCM.DLL V1.56.1.0
+ 
+<h2>Project:</h2>
+C:\Users\vikak\OneDrive\Робочий стіл\Магістратура\Радіо керування\Самохатній\Лаб2\Lab2.uvprojx
+Project File Date:  12/09/2022
+
+<h2>Output:</h2>
+*** Using Compiler 'V6.18', folder: 'C:\Keil_v5\ARM\ARMCLANG\Bin'
+Rebuild target 'Target 1'
+assembling startup_stm32f10x_md.s...
+RTE/Device/STM32F103C8/system_stm32f10x.c(166): warning: no previous extern declaration for non-static variable 'AHBPrescTable' [-Wmissing-variable-declarations]
+__I uint8_t AHBPrescTable[16] = {0, 0, 0, 0, 0, 0, 0, 0, 1, 2, 3, 4, 6, 7, 8, 9};
+            ^
+RTE/Device/STM32F103C8/system_stm32f10x.c(166): note: declare 'static' if the variable is not intended to be used outside of this translation unit
+__I uint8_t AHBPrescTable[16] = {0, 0, 0, 0, 0, 0, 0, 0, 1, 2, 3, 4, 6, 7, 8, 9};
+    ^
+1 warning generated.
+compiling system_stm32f10x.c...
+C:/Users/vikak/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.0/Device/StdPeriph_Driver/src/misc.c(131): warning: implicit conversion loses integer precision: 'uint32_t' (aka 'unsigned int') to 'uint8_t' (aka 'unsigned char') [-Wimplicit-int-conversion]
+    NVIC->IP[NVIC_InitStruct->NVIC_IRQChannel] = tmppriority;
+                                               ~ ^~~~~~~~~~~
+1 warning generated.
+compiling misc.c...
+main.cpp(1): warning: In file included from...
+C:/Users/vikak/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.0/Device/Include\stm32f10x.h(8347): warning: In file included from...
+./RTE/Device/STM32F103C8\stm32f10x_conf.h(87): warning: In file included from...
+C:/Users/vikak/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.0/Device/StdPeriph_Driver/inc\stm32f10x_tim.h(50): warning: padding size of 'TIM_TimeBaseInitTypeDef' with 1 byte to alignment boundary [-Wpadded]
+typedef struct
+        ^
+main.cpp(24): warning: use of old-style cast [-Wold-style-cast]
+        RCC_APB2PeriphClockCmd(RCC_APB2Periph_GPIOA, ENABLE);
+                               ^~~~~~~~~~~~~~~~~~~~
+C:/Users/vikak/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.0/Device/StdPeriph_Driver/inc\stm32f10x_rcc.h(497): note: expanded from macro 'RCC_APB2Periph_GPIOA'
+#define RCC_APB2Periph_GPIOA             ((uint32_t)0x00000004)
+                                          ^         ~~~~~~~~~~
+main.cpp(25): warning: use of old-style cast [-Wold-style-cast]
+        RCC_APB2PeriphClockCmd(RCC_APB2Periph_GPIOB, ENABLE);
+                               ^~~~~~~~~~~~~~~~~~~~
+C:/Users/vikak/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.0/Device/StdPeriph_Driver/inc\stm32f10x_rcc.h(498): note: expanded from macro 'RCC_APB2Periph_GPIOB'
+#define RCC_APB2Periph_GPIOB             ((uint32_t)0x00000008)
+                                          ^         ~~~~~~~~~~
+main.cpp(26): warning: use of old-style cast [-Wold-style-cast]
+        RCC_APB2PeriphClockCmd(RCC_APB2Periph_TIM1, ENABLE);
+                               ^~~~~~~~~~~~~~~~~~~
+C:/Users/vikak/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.0/Device/StdPeriph_Driver/inc\stm32f10x_rcc.h(506): note: expanded from macro 'RCC_APB2Periph_TIM1'
+#define RCC_APB2Periph_TIM1              ((uint32_t)0x00000800)
+                                          ^         ~~~~~~~~~~
+main.cpp(31): warning: use of old-style cast [-Wold-style-cast]
+        port.GPIO_Pin =  GPIO_Pin_9;
+                         ^~~~~~~~~~
+C:/Users/vikak/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.0/Device/StdPeriph_Driver/inc\stm32f10x_gpio.h(135): note: expanded from macro 'GPIO_Pin_9'
+#define GPIO_Pin_9                 ((uint16_t)0x0200)  /*!< Pin 9 selected */
+                                    ^         ~~~~~~
+main.cpp(33): warning: use of old-style cast [-Wold-style-cast]
+        GPIO_Init(GPIOA, &port);
+                  ^~~~~
+C:/Users/vikak/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.0/Device/Include\stm32f10x.h(1416): note: expanded from macro 'GPIOA'
+#define GPIOA               ((GPIO_TypeDef *) GPIOA_BASE)
+                                              ^~~~~~~~~~
+C:/Users/vikak/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.0/Device/Include\stm32f10x.h(1323): note: expanded from macro 'GPIOA_BASE'
+#define GPIOA_BASE            (APB2PERIPH_BASE + 0x0800)
+                               ^~~~~~~~~~~~~~~
+C:/Users/vikak/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.0/Device/Include\stm32f10x.h(1291): note: expanded from macro 'APB2PERIPH_BASE'
+#define APB2PERIPH_BASE       (PERIPH_BASE + 0x10000)
+                               ^~~~~~~~~~~
+C:/Users/vikak/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.0/Device/Include\stm32f10x.h(1282): note: expanded from macro 'PERIPH_BASE'
+#define PERIPH_BASE           ((uint32_t)0x40000000) /*!< Peripheral base address in the alias region */
+                               ^         ~~~~~~~~~~
+main.cpp(33): warning: use of old-style cast [-Wold-style-cast]
+        GPIO_Init(GPIOA, &port);
+                  ^~~~~
+C:/Users/vikak/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.0/Device/Include\stm32f10x.h(1416): note: expanded from macro 'GPIOA'
+#define GPIOA               ((GPIO_TypeDef *) GPIOA_BASE)
+                             ^                ~~~~~~~~~~
+main.cpp(39): warning: use of old-style cast [-Wold-style-cast]
+        port.GPIO_Pin =  GPIO_Pin_13 | GPIO_Pin_14 | GPIO_Pin_15;
+                         ^~~~~~~~~~~
+C:/Users/vikak/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.0/Device/StdPeriph_Driver/inc\stm32f10x_gpio.h(139): note: expanded from macro 'GPIO_Pin_13'
+#define GPIO_Pin_13                ((uint16_t)0x2000)  /*!< Pin 13 selected */
+                                    ^         ~~~~~~
+main.cpp(39): warning: use of old-style cast [-Wold-style-cast]
+        port.GPIO_Pin =  GPIO_Pin_13 | GPIO_Pin_14 | GPIO_Pin_15;
+                                       ^~~~~~~~~~~
+C:/Users/vikak/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.0/Device/StdPeriph_Driver/inc\stm32f10x_gpio.h(140): note: expanded from macro 'GPIO_Pin_14'
+#define GPIO_Pin_14                ((uint16_t)0x4000)  /*!< Pin 14 selected */
+                                    ^         ~~~~~~
+main.cpp(39): warning: use of old-style cast [-Wold-style-cast]
+        port.GPIO_Pin =  GPIO_Pin_13 | GPIO_Pin_14 | GPIO_Pin_15;
+                                                     ^~~~~~~~~~~
+C:/Users/vikak/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.0/Device/StdPeriph_Driver/inc\stm32f10x_gpio.h(141): note: expanded from macro 'GPIO_Pin_15'
+#define GPIO_Pin_15                ((uint16_t)0x8000)  /*!< Pin 15 selected */
+                                    ^         ~~~~~~
+main.cpp(41): warning: use of old-style cast [-Wold-style-cast]
+        GPIO_Init(GPIOB, &port);
+                  ^~~~~
+C:/Users/vikak/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.0/Device/Include\stm32f10x.h(1417): note: expanded from macro 'GPIOB'
+#define GPIOB               ((GPIO_TypeDef *) GPIOB_BASE)
+                                              ^~~~~~~~~~
+C:/Users/vikak/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.0/Device/Include\stm32f10x.h(1324): note: expanded from macro 'GPIOB_BASE'
+#define GPIOB_BASE            (APB2PERIPH_BASE + 0x0C00)
+                               ^~~~~~~~~~~~~~~
+C:/Users/vikak/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.0/Device/Include\stm32f10x.h(1291): note: expanded from macro 'APB2PERIPH_BASE'
+#define APB2PERIPH_BASE       (PERIPH_BASE + 0x10000)
+                               ^~~~~~~~~~~
+C:/Users/vikak/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.0/Device/Include\stm32f10x.h(1282): note: expanded from macro 'PERIPH_BASE'
+#define PERIPH_BASE           ((uint32_t)0x40000000) /*!< Peripheral base address in the alias region */
+                               ^         ~~~~~~~~~~
+main.cpp(41): warning: use of old-style cast [-Wold-style-cast]
+        GPIO_Init(GPIOB, &port);
+                  ^~~~~
+C:/Users/vikak/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.0/Device/Include\stm32f10x.h(1417): note: expanded from macro 'GPIOB'
+#define GPIOB               ((GPIO_TypeDef *) GPIOB_BASE)
+                             ^                ~~~~~~~~~~
+main.cpp(44): warning: use of old-style cast [-Wold-style-cast]
+        timer.TIM_Prescaler = SystemCoreClock / PERIOD / FREQUENT;
+                                                ^~~~~~
+main.cpp(11): note: expanded from macro 'PERIOD'
+#define PERIOD (uint16_t) (SystemCoreClock / 10000)  //Amount of timer ticks for one period
+               ^          ~~~~~~~~~~~~~~~~~~~~~~~~~
+main.cpp(44): warning: implicit conversion loses integer precision: 'unsigned int' to 'std::uint16_t' (aka 'unsigned short') [-Wimplicit-int-conversion]
+        timer.TIM_Prescaler = SystemCoreClock / PERIOD / FREQUENT;
+                            ~ ~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~
+main.cpp(45): warning: use of old-style cast [-Wold-style-cast]
+        timer.TIM_Period = PERIOD;
+                           ^~~~~~
+main.cpp(11): note: expanded from macro 'PERIOD'
+#define PERIOD (uint16_t) (SystemCoreClock / 10000)  //Amount of timer ticks for one period
+               ^          ~~~~~~~~~~~~~~~~~~~~~~~~~
+main.cpp(46): warning: use of old-style cast [-Wold-style-cast]
+        TIM_TimeBaseInit(TIM1, &timer);
+                         ^~~~
+C:/Users/vikak/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.0/Device/Include\stm32f10x.h(1425): note: expanded from macro 'TIM1'
+#define TIM1                ((TIM_TypeDef *) TIM1_BASE)
+                                             ^~~~~~~~~
+C:/Users/vikak/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.0/Device/Include\stm32f10x.h(1332): note: expanded from macro 'TIM1_BASE'
+#define TIM1_BASE             (APB2PERIPH_BASE + 0x2C00)
+                               ^~~~~~~~~~~~~~~
+C:/Users/vikak/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.0/Device/Include\stm32f10x.h(1291): note: expanded from macro 'APB2PERIPH_BASE'
+#define APB2PERIPH_BASE       (PERIPH_BASE + 0x10000)
+                               ^~~~~~~~~~~
+C:/Users/vikak/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.0/Device/Include\stm32f10x.h(1282): note: expanded from macro 'PERIPH_BASE'
+#define PERIPH_BASE           ((uint32_t)0x40000000) /*!< Peripheral base address in the alias region */
+                               ^         ~~~~~~~~~~
+main.cpp(46): warning: use of old-style cast [-Wold-style-cast]
+        TIM_TimeBaseInit(TIM1, &timer);
+                         ^~~~
+C:/Users/vikak/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.0/Device/Include\stm32f10x.h(1425): note: expanded from macro 'TIM1'
+#define TIM1                ((TIM_TypeDef *) TIM1_BASE)
+                             ^               ~~~~~~~~~
+main.cpp(48): warning: use of old-style cast [-Wold-style-cast]
+        TIM_Pulse = (uint16_t) (PERIOD*0.80);  //80% to get 20% on inverted pin
+                                ^~~~~~
+main.cpp(11): note: expanded from macro 'PERIOD'
+#define PERIOD (uint16_t) (SystemCoreClock / 10000)  //Amount of timer ticks for one period
+               ^          ~~~~~~~~~~~~~~~~~~~~~~~~~
+main.cpp(48): warning: use of old-style cast [-Wold-style-cast]
+        TIM_Pulse = (uint16_t) (PERIOD*0.80);  //80% to get 20% on inverted pin
+                    ^          ~~~~~~~~~~~~~
+main.cpp(50): warning: use of old-style cast [-Wold-style-cast]
+        timerPWM.TIM_OCMode = TIM_OCMode_PWM1;  
+                              ^~~~~~~~~~~~~~~
+C:/Users/vikak/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.0/Device/StdPeriph_Driver/inc\stm32f10x_tim.h(291): note: expanded from macro 'TIM_OCMode_PWM1'
+#define TIM_OCMode_PWM1                    ((uint16_t)0x0060)
+                                            ^         ~~~~~~
+main.cpp(51): warning: use of old-style cast [-Wold-style-cast]
+        timerPWM.TIM_OutputNState = TIM_OutputNState_Enable; //CH1N komplimentar output
+                                    ^~~~~~~~~~~~~~~~~~~~~~~
+C:/Users/vikak/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.0/Device/StdPeriph_Driver/inc\stm32f10x_tim.h(417): note: expanded from macro 'TIM_OutputNState_Enable'
+#define TIM_OutputNState_Enable            ((uint16_t)0x0004)
+                                            ^         ~~~~~~
+main.cpp(52): warning: use of old-style cast [-Wold-style-cast]
+        timerPWM.TIM_OutputState = TIM_OutputState_Enable; //CH1 output
+                                   ^~~~~~~~~~~~~~~~~~~~~~
+C:/Users/vikak/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.0/Device/StdPeriph_Driver/inc\stm32f10x_tim.h(405): note: expanded from macro 'TIM_OutputState_Enable'
+#define TIM_OutputState_Enable             ((uint16_t)0x0001)
+                                            ^         ~~~~~~
+main.cpp(54): warning: use of old-style cast [-Wold-style-cast]
+        timerPWM.TIM_OCPolarity = TIM_OCPolarity_High; //CH1 komplimentar output
+                                  ^~~~~~~~~~~~~~~~~~~
+C:/Users/vikak/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.0/Device/StdPeriph_Driver/inc\stm32f10x_tim.h(380): note: expanded from macro 'TIM_OCPolarity_High'
+#define TIM_OCPolarity_High                ((uint16_t)0x0000)
+                                            ^         ~~~~~~
+main.cpp(55): warning: use of old-style cast [-Wold-style-cast]
+        timerPWM.TIM_OCNPolarity = TIM_OCNPolarity_High; //CH1N komplimentar output
+                                   ^~~~~~~~~~~~~~~~~~~~
+C:/Users/vikak/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.0/Device/StdPeriph_Driver/inc\stm32f10x_tim.h(392): note: expanded from macro 'TIM_OCNPolarity_High'
+#define TIM_OCNPolarity_High               ((uint16_t)0x0000)
+                                            ^         ~~~~~~
+main.cpp(57): warning: use of old-style cast [-Wold-style-cast]
+        TIM_OC1Init(TIM1, &timerPWM);
+                    ^~~~
+C:/Users/vikak/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.0/Device/Include\stm32f10x.h(1425): note: expanded from macro 'TIM1'
+#define TIM1                ((TIM_TypeDef *) TIM1_BASE)
+                                             ^~~~~~~~~
+C:/Users/vikak/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.0/Device/Include\stm32f10x.h(1332): note: expanded from macro 'TIM1_BASE'
+#define TIM1_BASE             (APB2PERIPH_BASE + 0x2C00)
+                               ^~~~~~~~~~~~~~~
+C:/Users/vikak/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.0/Device/Include\stm32f10x.h(1291): note: expanded from macro 'APB2PERIPH_BASE'
+#define APB2PERIPH_BASE       (PERIPH_BASE + 0x10000)
+                               ^~~~~~~~~~~
+C:/Users/vikak/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.0/Device/Include\stm32f10x.h(1282): note: expanded from macro 'PERIPH_BASE'
+#define PERIPH_BASE           ((uint32_t)0x40000000) /*!< Peripheral base address in the alias region */
+                               ^         ~~~~~~~~~~
+main.cpp(57): warning: use of old-style cast [-Wold-style-cast]
+        TIM_OC1Init(TIM1, &timerPWM);
+                    ^~~~
+C:/Users/vikak/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.0/Device/Include\stm32f10x.h(1425): note: expanded from macro 'TIM1'
+#define TIM1                ((TIM_TypeDef *) TIM1_BASE)
+                             ^               ~~~~~~~~~
+main.cpp(58): warning: use of old-style cast [-Wold-style-cast]
+        TIM_OC2Init(TIM1, &timerPWM);
+                    ^~~~
+C:/Users/vikak/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.0/Device/Include\stm32f10x.h(1425): note: expanded from macro 'TIM1'
+#define TIM1                ((TIM_TypeDef *) TIM1_BASE)
+                                             ^~~~~~~~~
+C:/Users/vikak/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.0/Device/Include\stm32f10x.h(1332): note: expanded from macro 'TIM1_BASE'
+#define TIM1_BASE             (APB2PERIPH_BASE + 0x2C00)
+                               ^~~~~~~~~~~~~~~
+C:/Users/vikak/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.0/Device/Include\stm32f10x.h(1291): note: expanded from macro 'APB2PERIPH_BASE'
+#define APB2PERIPH_BASE       (PERIPH_BASE + 0x10000)
+                               ^~~~~~~~~~~
+C:/Users/vikak/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.0/Device/Include\stm32f10x.h(1282): note: expanded from macro 'PERIPH_BASE'
+#define PERIPH_BASE           ((uint32_t)0x40000000) /*!< Peripheral base address in the alias region */
+                               ^         ~~~~~~~~~~
+main.cpp(58): warning: use of old-style cast [-Wold-style-cast]
+        TIM_OC2Init(TIM1, &timerPWM);
+                    ^~~~
+C:/Users/vikak/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.0/Device/Include\stm32f10x.h(1425): note: expanded from macro 'TIM1'
+#define TIM1                ((TIM_TypeDef *) TIM1_BASE)
+                             ^               ~~~~~~~~~
+main.cpp(59): warning: use of old-style cast [-Wold-style-cast]
+        TIM_OC3Init(TIM1, &timerPWM);
+                    ^~~~
+C:/Users/vikak/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.0/Device/Include\stm32f10x.h(1425): note: expanded from macro 'TIM1'
+#define TIM1                ((TIM_TypeDef *) TIM1_BASE)
+                                             ^~~~~~~~~
+C:/Users/vikak/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.0/Device/Include\stm32f10x.h(1332): note: expanded from macro 'TIM1_BASE'
+#define TIM1_BASE             (APB2PERIPH_BASE + 0x2C00)
+                               ^~~~~~~~~~~~~~~
+C:/Users/vikak/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.0/Device/Include\stm32f10x.h(1291): note: expanded from macro 'APB2PERIPH_BASE'
+#define APB2PERIPH_BASE       (PERIPH_BASE + 0x10000)
+                               ^~~~~~~~~~~
+C:/Users/vikak/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.0/Device/Include\stm32f10x.h(1282): note: expanded from macro 'PERIPH_BASE'
+#define PERIPH_BASE           ((uint32_t)0x40000000) /*!< Peripheral base address in the alias region */
+                               ^         ~~~~~~~~~~
+main.cpp(59): warning: use of old-style cast [-Wold-style-cast]
+        TIM_OC3Init(TIM1, &timerPWM);
+                    ^~~~
+C:/Users/vikak/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.0/Device/Include\stm32f10x.h(1425): note: expanded from macro 'TIM1'
+#define TIM1                ((TIM_TypeDef *) TIM1_BASE)
+                             ^               ~~~~~~~~~
+main.cpp(61): warning: use of old-style cast [-Wold-style-cast]
+  TIM_Cmd(TIM1, ENABLE);
+          ^~~~
+C:/Users/vikak/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.0/Device/Include\stm32f10x.h(1425): note: expanded from macro 'TIM1'
+#define TIM1                ((TIM_TypeDef *) TIM1_BASE)
+                                             ^~~~~~~~~
+C:/Users/vikak/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.0/Device/Include\stm32f10x.h(1332): note: expanded from macro 'TIM1_BASE'
+#define TIM1_BASE             (APB2PERIPH_BASE + 0x2C00)
+                               ^~~~~~~~~~~~~~~
+C:/Users/vikak/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.0/Device/Include\stm32f10x.h(1291): note: expanded from macro 'APB2PERIPH_BASE'
+#define APB2PERIPH_BASE       (PERIPH_BASE + 0x10000)
+                               ^~~~~~~~~~~
+C:/Users/vikak/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.0/Device/Include\stm32f10x.h(1282): note: expanded from macro 'PERIPH_BASE'
+#define PERIPH_BASE           ((uint32_t)0x40000000) /*!< Peripheral base address in the alias region */
+                               ^         ~~~~~~~~~~
+main.cpp(61): warning: use of old-style cast [-Wold-style-cast]
+  TIM_Cmd(TIM1, ENABLE);
+          ^~~~
+C:/Users/vikak/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.0/Device/Include\stm32f10x.h(1425): note: expanded from macro 'TIM1'
+#define TIM1                ((TIM_TypeDef *) TIM1_BASE)
+                             ^               ~~~~~~~~~
+main.cpp(62): warning: use of old-style cast [-Wold-style-cast]
+        TIM_CtrlPWMOutputs(TIM1, ENABLE); //turn on MainOutputs. Required for TIM1, not required for others 
+                           ^~~~
+C:/Users/vikak/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.0/Device/Include\stm32f10x.h(1425): note: expanded from macro 'TIM1'
+#define TIM1                ((TIM_TypeDef *) TIM1_BASE)
+                                             ^~~~~~~~~
+C:/Users/vikak/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.0/Device/Include\stm32f10x.h(1332): note: expanded from macro 'TIM1_BASE'
+#define TIM1_BASE             (APB2PERIPH_BASE + 0x2C00)
+                               ^~~~~~~~~~~~~~~
+C:/Users/vikak/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.0/Device/Include\stm32f10x.h(1291): note: expanded from macro 'APB2PERIPH_BASE'
+#define APB2PERIPH_BASE       (PERIPH_BASE + 0x10000)
+                               ^~~~~~~~~~~
+C:/Users/vikak/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.0/Device/Include\stm32f10x.h(1282): note: expanded from macro 'PERIPH_BASE'
+#define PERIPH_BASE           ((uint32_t)0x40000000) /*!< Peripheral base address in the alias region */
+                               ^         ~~~~~~~~~~
+main.cpp(62): warning: use of old-style cast [-Wold-style-cast]
+        TIM_CtrlPWMOutputs(TIM1, ENABLE); //turn on MainOutputs. Required for TIM1, not required for others 
+                           ^~~~
+C:/Users/vikak/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.0/Device/Include\stm32f10x.h(1425): note: expanded from macro 'TIM1'
+#define TIM1                ((TIM_TypeDef *) TIM1_BASE)
+                             ^               ~~~~~~~~~
+main.cpp(71): warning: use of old-style cast [-Wold-style-cast]
+                if (GPIO_ReadInputDataBit(GPIOB, GPIO_Pin_9) == 0) {
+                                          ^~~~~
+C:/Users/vikak/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.0/Device/Include\stm32f10x.h(1417): note: expanded from macro 'GPIOB'
+#define GPIOB               ((GPIO_TypeDef *) GPIOB_BASE)
+                                              ^~~~~~~~~~
+C:/Users/vikak/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.0/Device/Include\stm32f10x.h(1324): note: expanded from macro 'GPIOB_BASE'
+#define GPIOB_BASE            (APB2PERIPH_BASE + 0x0C00)
+                               ^~~~~~~~~~~~~~~
+C:/Users/vikak/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.0/Device/Include\stm32f10x.h(1291): note: expanded from macro 'APB2PERIPH_BASE'
+#define APB2PERIPH_BASE       (PERIPH_BASE + 0x10000)
+                               ^~~~~~~~~~~
+C:/Users/vikak/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.0/Device/Include\stm32f10x.h(1282): note: expanded from macro 'PERIPH_BASE'
+#define PERIPH_BASE           ((uint32_t)0x40000000) /*!< Peripheral base address in the alias region */
+                               ^         ~~~~~~~~~~
+main.cpp(71): warning: use of old-style cast [-Wold-style-cast]
+                if (GPIO_ReadInputDataBit(GPIOB, GPIO_Pin_9) == 0) {
+                                          ^~~~~
+C:/Users/vikak/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.0/Device/Include\stm32f10x.h(1417): note: expanded from macro 'GPIOB'
+#define GPIOB               ((GPIO_TypeDef *) GPIOB_BASE)
+                             ^                ~~~~~~~~~~
+main.cpp(71): warning: use of old-style cast [-Wold-style-cast]
+                if (GPIO_ReadInputDataBit(GPIOB, GPIO_Pin_9) == 0) {
+                                                 ^~~~~~~~~~
+C:/Users/vikak/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.0/Device/StdPeriph_Driver/inc\stm32f10x_gpio.h(135): note: expanded from macro 'GPIO_Pin_9'
+#define GPIO_Pin_9                 ((uint16_t)0x0200)  /*!< Pin 9 selected */
+                                    ^         ~~~~~~
+main.cpp(73): warning: use of old-style cast [-Wold-style-cast]
+                                if (TIM_Pulse > PERIOD || TIM_Pulse <0)
+                                                ^~~~~~
+main.cpp(11): note: expanded from macro 'PERIOD'
+#define PERIOD (uint16_t) (SystemCoreClock / 10000)  //Amount of timer ticks for one period
+               ^          ~~~~~~~~~~~~~~~~~~~~~~~~~
+main.cpp(73): warning: result of comparison of unsigned expression < 0 is always false [-Wtautological-unsigned-zero-compare]
+                                if (TIM_Pulse > PERIOD || TIM_Pulse <0)
+                                                          ~~~~~~~~~ ^~
+main.cpp(76): warning: use of old-style cast [-Wold-style-cast]
+                                TIM1->CCR3 = TIM_Pulse;
+                                ^~~~
+C:/Users/vikak/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.0/Device/Include\stm32f10x.h(1425): note: expanded from macro 'TIM1'
+#define TIM1                ((TIM_TypeDef *) TIM1_BASE)
+                                             ^~~~~~~~~
+C:/Users/vikak/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.0/Device/Include\stm32f10x.h(1332): note: expanded from macro 'TIM1_BASE'
+#define TIM1_BASE             (APB2PERIPH_BASE + 0x2C00)
+                               ^~~~~~~~~~~~~~~
+C:/Users/vikak/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.0/Device/Include\stm32f10x.h(1291): note: expanded from macro 'APB2PERIPH_BASE'
+#define APB2PERIPH_BASE       (PERIPH_BASE + 0x10000)
+                               ^~~~~~~~~~~
+C:/Users/vikak/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.0/Device/Include\stm32f10x.h(1282): note: expanded from macro 'PERIPH_BASE'
+#define PERIPH_BASE           ((uint32_t)0x40000000) /*!< Peripheral base address in the alias region */
+                               ^         ~~~~~~~~~~
+main.cpp(76): warning: use of old-style cast [-Wold-style-cast]
+                                TIM1->CCR3 = TIM_Pulse;
+                                ^~~~
+C:/Users/vikak/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.0/Device/Include\stm32f10x.h(1425): note: expanded from macro 'TIM1'
+#define TIM1                ((TIM_TypeDef *) TIM1_BASE)
+                             ^               ~~~~~~~~~
+main.cpp(82): warning: no newline at end of file [-Wnewline-eof]
+}
+ ^
+42 warnings generated.
+compiling main.cpp...
+compiling stm32f10x_gpio.c...
+compiling stm32f10x_rcc.c...
+C:/Users/vikak/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.0/Device/StdPeriph_Driver/src/stm32f10x_tim.c(22): warning: In file included from...
+C:/Users/vikak/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.0/Device/StdPeriph_Driver/inc\stm32f10x_tim.h(50): warning: padding size of 'TIM_TimeBaseInitTypeDef' with 1 byte to alignment boundary [-Wpadded]
+typedef struct
+        ^
+C:/Users/vikak/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.0/Device/StdPeriph_Driver/src/stm32f10x_tim.c(725): warning: implicit conversion loses integer precision: 'unsigned int' to 'uint16_t' (aka 'unsigned short') [-Wimplicit-int-conversion]
+             TIM_BDTRInitStruct->TIM_Break | TIM_BDTRInitStruct->TIM_BreakPolarity |
+             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+C:/Users/vikak/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.0/Device/StdPeriph_Driver/src/stm32f10x_tim.c(1982): warning: implicit conversion loses integer precision: 'int' to 'uint16_t' (aka 'unsigned short') [-Wimplicit-int-conversion]
+  tmp = CCER_CCE_Set << TIM_Channel;
+      ~ ~~~~~~~~~~~~~^~~~~~~~~~~~~~
+C:/Users/vikak/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.0/Device/StdPeriph_Driver/src/stm32f10x_tim.c(2012): warning: implicit conversion loses integer precision: 'int' to 'uint16_t' (aka 'unsigned short') [-Wimplicit-int-conversion]
+  tmp = CCER_CCNE_Set << TIM_Channel;
+      ~ ~~~~~~~~~~~~~~^~~~~~~~~~~~~~
+C:/Users/vikak/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.0/Device/StdPeriph_Driver/src/stm32f10x_tim.c(2057): warning: implicit conversion loses integer precision: 'int' to 'uint16_t' (aka 'unsigned short') [-Wimplicit-int-conversion]
+  tmp1 = CCER_CCE_Set << (uint16_t)TIM_Channel;
+       ~ ~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~
+5 warnings generated.
+compiling stm32f10x_tim.c...
+linking...
+Program Size: Code=3892 RO-data=268 RW-data=4 ZI-data=1632  
+".\Objects\Lab2.axf" - 0 Error(s), 49 Warning(s).
+
+<h2>Software Packages used:</h2>
+
+Package Vendor: ARM
+                http://www.keil.com/pack/ARM.CMSIS.5.9.0.pack
+                ARM.CMSIS.5.9.0
+                CMSIS (Common Microcontroller Software Interface Standard)
+   * Component: CORE Version: 5.6.0
+
+Package Vendor: Keil
+                http://www.keil.com/pack/Keil.STM32F1xx_DFP.2.4.0.pack
+                Keil.STM32F1xx_DFP.2.4.0
+                STMicroelectronics STM32F1 Series Device Support, Drivers and Examples
+   * Component: Startup Version: 1.0.0
+   * Component: Framework Version: 3.6.0
+   * Component: GPIO Version: 3.6.0
+   * Component: RCC Version: 3.6.0
+   * Component: TIM Version: 3.6.0
+
+<h2>Collection of Component include folders:</h2>
+  ./RTE/Device/STM32F103C8
+  ./RTE/_Target_1
+  C:/Users/vikak/AppData/Local/Arm/Packs/ARM/CMSIS/5.9.0/CMSIS/Core/Include
+  C:/Users/vikak/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.0/Device/Include
+  C:/Users/vikak/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.0/Device/StdPeriph_Driver/inc
+
+<h2>Collection of Component Files used:</h2>
+
+   * Component: ARM::CMSIS:CORE:5.6.0
+
+   * Component: Keil::Device:Startup:1.0.0
+      Source file:   Device/Source/system_stm32f10x.c
+      Source file:   Device/Source/ARM/startup_stm32f10x_md.s
+      Include file:  RTE_Driver/Config/RTE_Device.h
+      Source file:   Device/Source/ARM/STM32F1xx_OPT.s
+
+   * Component: Keil::Device:StdPeriph Drivers:Framework:3.6.0
+      Source file:   Device/StdPeriph_Driver/src/misc.c
+      Source file:   Device/StdPeriph_Driver/templates/stm32f10x_conf.h
+      Source file:   Device/StdPeriph_Driver/templates/stm32f10x_it.c
+      Include file:  Device/StdPeriph_Driver/inc/misc.h
+      Include file:  Device/StdPeriph_Driver/templates/stm32f10x_it.h
+
+   * Component: Keil::Device:StdPeriph Drivers:GPIO:3.6.0
+      Include file:  Device/StdPeriph_Driver/inc/stm32f10x_gpio.h
+      Source file:   Device/StdPeriph_Driver/src/stm32f10x_gpio.c
+
+   * Component: Keil::Device:StdPeriph Drivers:RCC:3.6.0
+      Source file:   Device/StdPeriph_Driver/src/stm32f10x_rcc.c
+      Include file:  Device/StdPeriph_Driver/inc/stm32f10x_rcc.h
+
+   * Component: Keil::Device:StdPeriph Drivers:TIM:3.6.0
+      Include file:  Device/StdPeriph_Driver/inc/stm32f10x_tim.h
+      Source file:   Device/StdPeriph_Driver/src/stm32f10x_tim.c
+Build Time Elapsed:  00:00:02
+</pre>
+</body>
+</html>
